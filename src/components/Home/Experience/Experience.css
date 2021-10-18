@@ -1,0 +1,28 @@
+.experience{
+ margin-bottom: 100px;
+}
+
+.experience-content{
+    padding-top: 50px;
+  
+
+   
+}
+.experience-img{
+
+}
+.progress-height{
+    height: 12px;
+    font-size: 17px;
+    color: black !important;
+   
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+.progress-bar{
+    color: black;
+}
+.pro-p{
+    margin-bottom: 4px;
+    margin-top: 16px;
+}

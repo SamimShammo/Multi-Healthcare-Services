@@ -1,0 +1,35 @@
+.banner-container{
+    background-image: url(../../img/b1.jpg);
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 16% 0;
+    
+}
+.banner{
+   margin: 0% !important;
+   right: 50% !important;
+   left: 0% !important;
+}
+
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+    .banner-container{
+        padding: 30% 0;
+    }
+ }
+@media (min-width: 576.98px) and (max-width: 768.98px) {
+   
+ }
+@media (min-width: 769.98px) and (max-width: 991.98px) {
+   
+ }
+@media (min-width: 992.98px) and (max-width: 1199.98px) {
+   
+ }
+@media (min-width: 1200.98px) and (max-width: 1399.98px) {
+   
+ }

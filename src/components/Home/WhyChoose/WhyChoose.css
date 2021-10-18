@@ -1,0 +1,14 @@
+.Chooseus{
+    text-align: center;
+}
+.line-bottom{
+    width: 146px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px !important;
+    opacity: 100;
+    background-color: black !important;
+}
+.margin-top-bottom{
+    margin: 100px 0;
+}
