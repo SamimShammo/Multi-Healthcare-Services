@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import img from './bg_1.jpg';
+
 
 import {useLocation } from 'react-router-dom';
 import {useHistory } from 'react-router';
@@ -30,8 +30,7 @@ const Login = () => {
               .finally(() => setIsLoading(false));
       }
 
-      
-
+     
     return (
      
   <div className="">

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import initializeAuthentication from '../Firebase/firebase.init';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 
+
 initializeAuthentication();
 const useFirebase = () => {
 
@@ -15,6 +16,7 @@ const auth = getAuth();
     const [isLoading, setIsLoading] = useState(true)
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
+    
 
  // googleSignIn  googleSignIn
     const googleSignIn = () => {
@@ -49,11 +51,13 @@ const auth = getAuth();
 
         // login check 
         if(isLogin){
+    
             signInUser(email, password)
+
             
         }
         else{
-            
+        
             createUser(email, password)
         }
 
@@ -77,8 +81,8 @@ const auth = getAuth();
       const signInUser = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user)
+          
+            setUser(result.user)
             setError('')
         })
         .catch(error => {
@@ -90,14 +94,17 @@ const auth = getAuth();
      // sign in user  sign in user  sign in user  sign in user 
 
     // create a new user create a new user  create a new user 
+
     const createUser = (email, password) => {
-      
+
+        
         createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
-            const user = result.user
-            console.log(user)
+           
+            setUser(result.user)
             setError('')
             setNewUser()
+      
         })
         .catch(error => {
             setError(error.message)
@@ -124,10 +131,12 @@ const auth = getAuth();
     updateProfile(auth.currentUser, {
         displayName: name})
         .then(result => {
+            setUser(result.user)
             console.log(result)
+            setError('')
         })
         .catch((error) => {
-            setError(error.message)
+            setError("CONGRATULATION")
            });
 }
 

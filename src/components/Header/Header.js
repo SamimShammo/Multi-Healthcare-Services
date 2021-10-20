@@ -37,7 +37,7 @@ const Header = () => {
                         }} to="/doctors">Our Doctors</Nav.Link>
                         <Nav.Link className="nav-tag " active={{
                             color: "red"
-                        }} ><i class="fas fa-user"></i> {user?.displayName}</Nav.Link>
+                        }} ><i class="fas fa-user"></i>{user?.displayName}</Nav.Link>
                         {user?.email ?  <button className="btn btn-regular" onClick={logout}>Logout</button> :
                          <button className="btn btn-regular" onClick={goLogin}>Login</button>}
                     </Nav>
