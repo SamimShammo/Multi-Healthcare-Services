@@ -43,7 +43,7 @@ const Login = () => {
         <div className="col-md-12">
           <div className="form-block mx-auto">
             <div className="text-center mb-5">
-              <h4 className="text-uppercase">{isLogin ? 'Login to' :  'Register to ' }  <br /><strong>Multi-Healthcare-Services </strong></h4>
+              <h4 className="text-uppercase"><strong>{isLogin ? 'Login to' :  'Register to ' }</strong> </h4>
             </div>
             <form  onSubmit={submitHandler}>
             {!isLogin &&  <div className="form-group first mb-3">
@@ -68,7 +68,7 @@ const Login = () => {
                 <span className=" ms-auto"><button className="btn btn-regular" onClick={resetPassword}>Forgot Password</button></span> 
               </div>
                <p className="text-danger">{error}</p>
-              <button type="submit"  className="btn btn-block py-2 btn-primary mr-5 w-100 btn-regular" >{isLogin ? 'Register' : 'Login'}</button>
+              <button type="submit"  className="btn btn-block py-2 btn-primary mr-5 w-100 btn-regular" >{isLogin ? 'Login' : 'Register'}</button>
               
               <span className="text-center my-3 d-block">or</span>
           

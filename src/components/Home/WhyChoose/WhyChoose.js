@@ -14,7 +14,7 @@ const WhyChoose = () => {
           {   id: 2,
               icon:"fas fa-brain",
               name: "Modern equipment",
-              description:"List of modern equipment of the Syrian Arab Army. The vast majority of Syrian military  was Soviet  but equipment the  and Syrian military majority doctrine .",
+              description:"List of modern equipment of the Syrian Arab Army. The vast majority of Syrian military  was Soviet  but equipment the  and Syrian military majority doctrine was .",
           },
           {   id: 3,
               icon:"fas fa-ambulance",
