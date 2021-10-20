@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import {useHistory} from 'react-router'
 import useAuth from '../../useAuth/useAuth';
 import  logo from '../img/logo.png';
 import './Header.css'
@@ -8,10 +9,16 @@ import './Header.css'
 
 
 const Header = () => {
-    const {user} = useAuth()
+    const {user, logout} = useAuth()
+
+    const history = useHistory()
+    const goLogin = () => {
+        history.push('/login')
+    }
+
     return (
         <>
-            <Navbar bg="white"  collapseOnSelect  expand="lg" className="sticky-top" >
+            <Navbar bg="white"  collapseOnSelect  expand="lg" className="sticky-top header shadow" >
                 <Container>
                     <Navbar.Brand href="#home">
                         <Image src={logo}/>
@@ -28,11 +35,11 @@ const Header = () => {
                         <Nav.Link as={Link} className="nav-tag " active={{
                             color: "red"
                         }} to="/doctors">Our Doctors</Nav.Link>
-                        <Nav.Link as={Link} className="nav-tag " active={{
+                        <Nav.Link className="nav-tag " active={{
                             color: "red"
-                        }} to="/doctors"><i class="fas fa-user"></i> {user.displayName}</Nav.Link>
-                        {user?.email ?  <button className="btn btn-regular">Login</button> :
-                         <button className="btn btn-regular">LogOut</button>}
+                        }} ><i class="fas fa-user"></i> {user?.displayName}</Nav.Link>
+                        {user?.email ?  <button className="btn btn-regular" onClick={logout}>Logout</button> :
+                         <button className="btn btn-regular" onClick={goLogin}>Login</button>}
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

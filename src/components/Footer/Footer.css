@@ -1,0 +1,66 @@
+.footer{
+   
+    padding: 30px 0;
+    background-color: #E1F3FF;
+
+}
+
+  .widget .widget-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+  
+ 
+  
+  .widget-address address {
+    position: relative;
+  }
+  
+  .widget-address span, .widget-address a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    line-height: 28px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .widget-addres a:hover {
+    color: rgb(0, 0, 219);
+  }
+
+  .widget-address span i, .widget-address a i {
+    
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+  
+  .widget-address a {
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+
+  
+
+  /* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+   
+ }
+@media (min-width: 576.98px) and (max-width: 768.98px) {
+   
+ }
+@media (min-width: 769.98px) and (max-width: 991.98px) {
+   
+ }
+@media (min-width: 992.98px) and (max-width: 1199.98px) {
+   
+ }
+@media (min-width: 1200.98px) and (max-width: 1399.98px) {
+   
+ }
+ 

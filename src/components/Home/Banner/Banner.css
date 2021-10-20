@@ -12,6 +12,10 @@
    right: 50% !important;
    left: 0% !important;
 }
+.banner-heading{
+    font-size: 45px;
+    font-weight: 600;
+}
 
 
 
@@ -19,6 +23,10 @@
 @media (min-width: 0px) and (max-width: 575.98px) {
     .banner-container{
         padding: 30% 0;
+    }
+    .banner-heading{
+        font-size: 28px;
+        font-weight: 600;
     }
  }
 @media (min-width: 576.98px) and (max-width: 768.98px) {

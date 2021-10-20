@@ -43,6 +43,12 @@ body {
       .half .contents {
         width: 100%; } }
   
+        .contents{
+          padding: 100px 0;
+          background-image: url(../img/b2.jpg);
+          background-size: cover;
+          background-position: center;
+        }
   .half .contents .form-control, .half .bg .form-control {
     border: none;
     border-radius: 4px;

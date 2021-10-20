@@ -1,0 +1,61 @@
+.doctor{
+    text-align: center;
+  
+    border: 1px solid #207EF7;
+    transition: .6s;
+}
+.doctor-img{
+    margin-bottom: 10px;
+}
+.doctor-img img{
+    height: 320px;
+    width: 100%;
+    border-radius: 10px 10px  0 0;
+}
+.doctor-icon i {
+    font-size: 30px;
+    color: #207EF7;
+    margin: 5px;
+    cursor: pointer;
+}
+.doctor:hover .doctor-icon i{
+    font-size: 30px;
+    color: black;
+    transition: .6s;
+    margin: 5px;
+    cursor: pointer;
+}
+.doctor:hover{
+    border: 1px solid rgba(184, 184, 184, 0.26);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.card-heading{
+   font-size: 30px;
+}
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+    .card-heading{
+        font-size: 25px;
+    }
+ }
+@media (min-width: 576.98px) and (max-width: 768.98px) {
+    .card-heading{
+        font-size: 25px;
+    }
+ }
+@media (min-width: 769.98px) and (max-width: 991.98px) {
+    .card-heading{
+        font-size: 25px;
+    }
+ }
+@media (min-width: 992.98px) and (max-width: 1199.98px) {
+    .card-heading{
+        font-size: 25px;
+    }
+ }
+@media (min-width: 1200.98px) and (max-width: 1399.98px) {
+   
+ }

@@ -37,3 +37,40 @@
     box-shadow: inset 400px 0px 0 0px black;
 }
 
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+ 
+ }
+@media (min-width: 576.98px) and (max-width: 768.98px) {
+   
+ }
+@media (min-width: 769.98px) and (max-width: 991.98px) {
+    .single-choose i{
+        font-size: 400%;
+        color: #207EF7;
+        margin-bottom: 20px;
+    }
+    .single-choose{
+
+        padding: 20px 10px;
+        
+    }
+    .single-choose h3{
+        font-size: 22px;
+    }
+    .single-choose p {
+        font-size: 14px;
+    }
+    .btn-choose{
+        padding: 5px 15px;
+        font-size: 14px;
+        
+    }
+ }
+@media (min-width: 992.98px) and (max-width: 1199.98px) {
+   
+ }
+@media (min-width: 1200.98px) and (max-width: 1399.98px) {
+   
+ }

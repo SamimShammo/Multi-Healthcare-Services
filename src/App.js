@@ -9,6 +9,9 @@ import Login from './components/Login/Login'
 import AuthProvider from './context/AuthProvider';
 import PrivateRouter from './PrivateRouter/PrivateRouter';
 import AboutUs from './components/AboutUs/AboutUs';
+import OurDoctors from './components/OurDoctors/OurDoctors';
+import ReadMore from './components/Home/Service/ReadMore/ReadMore';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -26,9 +29,15 @@ function App() {
                <Route  path="/home">
                  <Home></Home>
                </Route>
-               <PrivateRouter path="/about">
+               <Route path="/about">
                  <AboutUs></AboutUs>
+               </Route>
+               <PrivateRouter path="/services/:serviceId">
+                 <ReadMore></ReadMore>
                </PrivateRouter>
+               <Route path="/doctors">
+                 <OurDoctors></OurDoctors>
+               </Route>
                <Route  path="/login">
                   <Login></Login>
                 </Route>
@@ -36,6 +45,7 @@ function App() {
                       <Notfound />
                  </Route>
              </Switch>
+             <Footer></Footer>
          </BrowserRouter>
     </AuthProvider>
         

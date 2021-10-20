@@ -2,36 +2,41 @@ import React from 'react';
 import './Login.css';
 import img from './bg_1.jpg';
 
-import { useHistory, useLocation } from 'react-router';
+import {useLocation } from 'react-router-dom';
+import {useHistory } from 'react-router';
 import useAuth from '../../useAuth/useAuth';
 
 const Login = () => {
 
-  const {googleSignIn, submitHandler, setUser, setError, isLogin, checkRegister, error, handleEmail, handlePassword, handleName, resetPassword} = useAuth();
+  const {googleSignIn, submitHandler, setUser, setError, isLogin, checkRegister, error, handleEmail, handlePassword, handleName, resetPassword, setIsLoading} = useAuth();
   const location = useLocation()
   const history = useHistory()
 
-const redirect_uri = location.state?.from || './home';
+      const redirect_uri = location.state?.from || '../Home/Home';
+      console.log('came',redirect_uri)
 
-      const signInWithGoogle = () => {
-        googleSignIn()
-        .then(result => {
-          console.log(result.user);
-          setUser(result.user);
-          history.push(redirect_uri)
-          
-      })
+            const signInWithGoogle = () => {
+              googleSignIn()
+              .then(result => {
+                console.log(result.user);
+                setUser(result.user);
+                history.push(redirect_uri)
+                
+            })
 
-        .catch(error => {
-            setError(error.message);
-        })
-}
+              .catch(error => {
+                  setError(error.message);
+              })
+              .finally(() => setIsLoading(false));
+      }
+
+      
 
     return (
      
   <div className="">
-  <div className="bg" style={{img}}></div>
-  <div className="contents">
+
+  <div className="contents shadow">
 
     <div className="container">
       <div className="row align-items-center justify-content-center">
@@ -55,22 +60,19 @@ const redirect_uri = location.state?.from || './home';
               </div>
 
             
-              <div className="d-sm-flex mb-5 align-items-center ">
+              <div className="d-flex mb-5 align-items-center ">
               <input onChange={checkRegister} className="form-check-input text-whi" type="checkbox" id="gridCheck1"/>
                     <label className="form-check-label text-whi" htmlFor="gridCheck1">
-                    {isLogin ? ' Login' : 'Register'}
+                    {isLogin ? 'Register' : 'Login'}
                     </label>
                 <span className=" ms-auto"><button className="btn btn-regular" onClick={resetPassword}>Forgot Password</button></span> 
               </div>
                <p className="text-danger">{error}</p>
-              <button type="submit"  className="btn btn-block py-2 btn-primary mr-5 w-100 btn-regular" >{isLogin ? 'Login' : 'Register'}</button>
+              <button type="submit"  className="btn btn-block py-2 btn-primary mr-5 w-100 btn-regular" >{isLogin ? 'Register' : 'Login'}</button>
               
               <span className="text-center my-3 d-block">or</span>
           
               <div className="">
-              <button  className="btn btn-block py-2 btn-facebook  w-100 mb-2">
-                <span className="icon-facebook mr-3 "></span> Login with facebook
-              </button>
               <button className="btn  py-2 btn-google w-100" onClick={signInWithGoogle} >Login with Google</button>
               </div>
             </form>

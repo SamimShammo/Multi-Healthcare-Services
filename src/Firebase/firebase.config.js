@@ -1,10 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyB8ro6-dVvRYDO0msnMOlx4fBGNULEpvAU",
-  authDomain: "burj-al-arab-eb109.firebaseapp.com",
-  projectId: "burj-al-arab-eb109",
-  storageBucket: "burj-al-arab-eb109.appspot.com",
-  messagingSenderId: "431737449767",
-  appId: "1:431737449767:web:c8a5a2988ac78fc6280d02",
-  measurementId: "G-KW5K4C9Y4J"
+  apiKey: "AIzaSyA2gX3FYhTBCwGkH_W7pJp6fQcZX8KLPSg",
+  authDomain: "multi-healthcare-services.firebaseapp.com",
+  projectId: "multi-healthcare-services",
+  storageBucket: "multi-healthcare-services.appspot.com",
+  messagingSenderId: "870650868971",
+  appId: "1:870650868971:web:47e2dfa723522f7bed7aae"
 };
 export default firebaseConfig;  

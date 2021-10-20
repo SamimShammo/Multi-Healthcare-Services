@@ -1,0 +1,39 @@
+.readmore-container{
+    background-image: url(../../../img/b2.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-attachment: fixed;
+  
+
+}
+.background-color{
+   background-color: rgba(0, 0, 0, 0.52);
+   padding: 17% 0;
+   text-align: center;
+}
+.background-color h2{
+    font-size: 40px;
+    color: white;
+}
+.readMore-content{
+    
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px 0;
+    
+}
+.readmore-img{
+    border-radius: 20px;
+}
+.read-container{
+    background-color: #F6F4FF;
+}
+.read-content{
+    padding: 20px;
+}
+.read-content h3{
+ font-weight: 600;
+}
+.read-content p{
+     font-size: 15px;
+}

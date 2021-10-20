@@ -10,15 +10,17 @@ const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     const [user, setUser] =useState({})
     const [error, setError] =useState('')
-    const [isLogin, setIsLogin] = useState(false)
+    const [isLogin, setIsLogin] = useState(true)
     const [password, setPassword] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
     const [email, setEmail] = useState('')
     const [name, setName] = useState('')
 
  // googleSignIn  googleSignIn
     const googleSignIn = () => {
+        setIsLoading(true)
     return signInWithPopup(auth, googleProvider)
-          
+   
     }
 // googleSignIn googleSignIn 
    const handleName = e => {
@@ -48,8 +50,10 @@ const auth = getAuth();
         // login check 
         if(isLogin){
             signInUser(email, password)
+            
         }
         else{
+            
             createUser(email, password)
         }
 
@@ -63,6 +67,7 @@ const auth = getAuth();
             else {
                 setUser({})
             }
+            setIsLoading(false);
         })
         return () => subscribed;
     }, [])
@@ -79,12 +84,14 @@ const auth = getAuth();
         .catch(error => {
             setError(error.message)
         })
+        .finally(() => setIsLoading(false));
       }
 
      // sign in user  sign in user  sign in user  sign in user 
 
     // create a new user create a new user  create a new user 
     const createUser = (email, password) => {
+      
         createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
             const user = result.user
@@ -95,18 +102,21 @@ const auth = getAuth();
         .catch(error => {
             setError(error.message)
         })
+       
     }
     // create a new user  create a new user  create a new user  
 
 //    logout  user  logout  user  logout  user  logout  user 
    const logout = () => {
+    setIsLoading(true)
     signOut(auth)
     .then(() => {
           setUser()
       })
       .catch((error) => {
        setError(error.message)
-      });
+      })
+      .finally(() => setIsLoading(false));
    }
   //    logout  user  logout  user  logout  user  logout  user 
 
@@ -140,10 +150,15 @@ const auth = getAuth();
         user,
         error,
         isLogin,
+        isLoading,
         logout,
         setUser,
+        setNewUser, 
         setError,
         handleName,
+        createUser,
+        signInUser,
+        setIsLoading,
         handleEmail,
         submitHandler,
         resetPassword,
